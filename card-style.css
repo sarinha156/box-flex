@@ -5,8 +5,8 @@ body {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     display: flex;
     align-items: center;
-    justify-content: center;
-    padding: 50px
+    justify-content: center; 
+    height: 100vh;
 }
 
 .card {
@@ -70,6 +70,11 @@ body {
     font-size: .8rem;
     font-weight: 700;
     color: #b43a5f;
+    transition: all 0.3s ease;  
+}
+.card li:hover { 
+    transform: scale(1.1);
+    transition: all 0.3s ease;
 }
 .card p{
     color: #6b6b6b;
