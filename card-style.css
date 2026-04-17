@@ -33,22 +33,24 @@ body {
 
 .card {
     background: var(--white-color);
-    width: 500px;
+    width: 450px;
     min-height: 400px;
     height: auto;
     border-radius: 15px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
-    display: flex; 
+    display: flex;
     padding: 35PX;
     flex-direction: column;
-    text-align: center;  
+    text-align: center;
 }
-.perfil{
+
+.perfil {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
- .card .perfil .icone {
+
+.card .perfil .icone {
     width: 115px;
     height: 115px;
     background-color: var(--secondary-color);
@@ -73,11 +75,15 @@ body {
     background-color: var(--light-pink-color);
 }
 
-
 .card img {
     width: 70px;
     height: 90px;
-    transition: all 0.3s ease;
+    filter: saturate(0%) brightness(200%);
+}
+
+.card .icone:hover img {
+    filter: none;
+    transition: filter 0.5s ease;
 }
 
 .card h4,
@@ -89,6 +95,7 @@ body {
 .card h1 {
     line-height: 1;
 }
+
 .card h4 {
     color: var(--primary-color);
     font-weight: 400;
@@ -139,6 +146,7 @@ body {
     border: 1px solid var(--secondary-color);
     box-shadow: 0px 3px 7px #00000059;
     border: 1px solid var(--text-color);
+    transition: background 0.3s ease, color 0.3s ease;
 }
 
 .card .button:hover {
@@ -146,12 +154,12 @@ body {
 }
 
 .card .redes {
-     display: flex;
+    display: flex;
     gap: 10px;
     margin-top: 15px;
     padding: 0px;
     flex-direction: column;
-    position: absolute;  
+    position: absolute;
 }
 
 .redes a {
@@ -163,11 +171,11 @@ body {
     background: var(--light-pink-color);
     border-radius: 50%;
     color: var(--primary-color);
-    transition: 0.3s;
+
 }
-.redes a:hover { 
+
+.redes a:hover {
     background: var(--primary-color);
     border-radius: 50%;
     color: var(--white-color);
-    transition: 0.3s;
 }
