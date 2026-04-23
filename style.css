@@ -1,0 +1,131 @@
+/*CSS reset */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+/* Declarçao das variaveis css (custom prosperties*/
+:root {
+    /* cores da landing Page*/
+
+    --cor-primaria: #004AC6;
+    --cor-primaria-hover: #003ea8;
+    --cor-fundo: #F8F9FF;
+    --cor-branca: #ffffff;
+    --cor-fundo-segundario: #EFF4FF;
+    --cor-texto: #0b1c30;
+    --cor-texto-suave: #434655;
+    --cor-borda: #C3C607;
+
+    /* Tipografia*/
+    --fonte-principal: "inter", sans-serif;
+
+    /*espacamentos - medida : rem-> Melhor acessibilidades : respeita configuracao do usuario*/
+    --espaco-xs: 0.5rem;
+    /*8px*/
+    --espaco-sm: 1rem;
+    /*16*/
+    --espaco-md: 1.25rem;
+    /*20*/
+    --espaco-lg: 1.5rem;
+    /*24*/
+    --espaco-1g: 2rem;
+    /*32*/
+    --espaco-x1: 3rem;
+    /*48*/
+    --espaco-xx1: 6rem;
+    /*96*/
+
+    /*bordas arredondadas*/
+
+    --raio-sm: 0.5rem;
+    --raio-md: 0.75rem;
+    --raio-lg: 1rem;
+
+
+}
+
+body {
+    font-family: var(--fonte-principal);
+    background-color: var(--cor-fundo);
+    color: var(--cor-fundo);
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none; 
+}
+
+ul {
+    list-style: none;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+    background-color: var(--cor-fundo);
+    opacity: 0.85;
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--cor-borda);
+}
+
+.navbar-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;  
+    padding: var(--espaco-sm) var(--espaco-lg);
+    max-width: 1280px;
+    margin: 0 auto; 
+}
+
+.navbar-logo{
+    font-size: 1.25rem;
+    font-weight: 800;
+    color: var(--cor-primaria);
+    text-decoration: none;
+    letter-spacing: -0.03em;
+}
+.navbar-links {
+    display: flex;
+    gap: var(--espaco-lg);
+    list-style: none;
+}
+.navbar-links a{
+    color: var(--cor-texto-suave);
+    text-decoration: none;
+    font-size: 0.9375rem;
+    font-weight: 500;
+    transition: color 0.2s ease; 
+}
+.navbar-links a:hover{
+    color: var(--cor-primaria); 
+}
+
+.navbar-botoes {
+    display: flex;
+    align-items: center;
+    gap: var(--espaco-sm);
+}
+.navbar-login-link{
+    background: transparent; 
+    color: var(--cor-texto-suave);
+    padding: var(--espaco-xs) var(--espaco-md);
+}
+.navbar-button{
+    background-color: var(--cor-primaria);
+    color: #fff;
+    border-color: var(--cor-primaria);
+    padding: var(--espaco-sm) var(--espaco-md);
+    border-radius: 10px; 
+    transition: 500ms ease;
+}
+.navbar-button:hover{ 
+    transform: scale(1.03);
+    transition: 500ms ease;
+    background-color: var(--cor-primaria-hover);
+}
